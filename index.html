@@ -210,7 +210,7 @@
   
     <div class="article-meta">
       <a href="/2016/10/26/hello-world/" class="article-date">
-  	<time datetime="2016-10-26T11:53:55.636Z" itemprop="datePublished">2016-10-26</time>
+  	<time datetime="2016-10-26T13:38:53.296Z" itemprop="datePublished">2016-10-26</time>
 </a>
     </div>
   
@@ -245,6 +245,181 @@
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
 
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+      
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="[layout]-LAMP-LANP" class="article article-type-[layout]" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/10/26/LAMP-LANP/" class="article-date">
+  	<time datetime="2016-10-26T13:20:52.000Z" itemprop="datePublished">2016-10-26</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/26/LAMP-LANP/">
+        LAMP LANP
+        
+      </a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li>LAMP linux+apache+mysql+php python nginx</li>
+</ul>
+<p>1.nginx安装 yum -y install nginx</p>
+<h2 id="在mysql中给app-创建用户-表-授权"><a href="#在mysql中给app-创建用户-表-授权" class="headerlink" title="在mysql中给app 创建用户 表 授权"></a>在mysql中给app 创建用户 表 授权</h2><p>2.mysql安装 yum -y install mysql mysql-server mysql-devel</p>
+<ul>
+<li>创建用户授权创建表 我在MySQL里面做了介绍，就不在这里阐述了</li>
+</ul>
+<p>3.php安装 yum -y install php</p>
+<p>4.php-mysql安装 yum -y install php-mysql     [安装了什么编程语言，就要安装相对应的（语言-mysql）包  比如：php php-mysql]<br>5.dns安装 yum -y install bind bind-libs</p>
+<p>6.spawn-fcgi安装 需要下载安装包<br>配置spawn-fcgi</p>
+<p>vim /etc/sysconfig/spawn-fcgi<br>取消下面两行代码的注释，如果第二行代码是-u apache -g apache的话，需要改成-u nginx -g nginx<br>    SOCKET=/var/run/php-fcgi.sock<br>    OPTIONS=”-u nginx -g nginx -s $SOCKET -S -M 0600 -C 32 -F 1 -P /var/run/spawn-fcgi.pid – /usr/bin/php-cgi”<br>配置nginx 以虚拟主机的方式<br>vim /etc/nginx/conf.d/www.conf<br>在配置虚拟主机的基础下加入以下代码<br>    location ~ .php$ {<br>      root /var/www/html/www;<br>      fastcgi_pass unix:/var/run/php-fcgi.sock;<br>      fastcgi_index index.php;<br>      fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;<br>      include fastcgi_params;<br>    }</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+      
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="[layout]-nagios" class="article article-type-[layout]" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/10/26/nagios/" class="article-date">
+  	<time datetime="2016-10-26T12:45:56.000Z" itemprop="datePublished">2016-10-26</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/26/nagios/">
+        nagios
+        
+      </a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li><p>在工作中，尤其是做运维，对服务器的管控，很重要，今天我搭建了服务器监控nagios。工作原理：数据收集–&gt;数据存储–&gt;数据分析–&gt;报警处理–&gt;数据显示</p>
+</li>
+<li><p>需求：通过nagios对磁盘和web服务器进行监控并且发邮件报警</p>
+</li>
+<li><p>需求监控30.37的 30.37主机//http:80 端口 OK 5m KO 1m  3次状态一样最终确定服务器</p>
+</li>
+<li><p>30.37 7*24 监控 </p>
+</li>
+<li><p>service 06-24</p>
+</li>
+<li><p>warn | fail | OK unknown ：</p>
+</li>
+<li><p>email ： proo@qq.com</p>
+</li>
+<li><p>notify in  2h 发送 报警的频率</p>
+</li>
+<li><p>time  5*8 上班时间</p>
+</li>
+</ul>
+<h2 id="需要安装软件-nagios-nagios-plugins-nagios-web"><a href="#需要安装软件-nagios-nagios-plugins-nagios-web" class="headerlink" title="需要安装软件 nagios  nagios-plugins nagios-web"></a>需要安装软件 nagios  nagios-plugins nagios-web</h2><ul>
+<li><p>我是在官网找到的rpm包 ，然后通过记录到yum然后配置软件仓库。</p>
+<p>  yum install nagios  nagios-plugins nagios-web</p>
+</li>
+</ul>
+<h2 id="创建用户"><a href="#创建用户" class="headerlink" title="创建用户"></a>创建用户</h2><pre><code>useradd nagios
+groupadd nagcmd   
+gpasswd -a nagios nagcmd     ---nagios添加到nagcmd组
+</code></pre><h2 id="修改配置文件"><a href="#修改配置文件" class="headerlink" title="修改配置文件"></a>修改配置文件</h2><ul>
+<li><p>添加主机配置文件</p>
+<p>  vim /etc/nagios/objects/hosts/30.6.cfg<br>  define host{</p>
+<pre><code>use                     linux-server
+host_name               vm130
+alias                   vm130
+address                 192.168.32.130
+max_check_attempts      3
+</code></pre><p>  }</p>
+<p>  define service{</p>
+<pre><code>use                             local-service
+host_name                       vm130
+service_description             HTTP
+check_command                   check_http
+notifications_enabled           1
+</code></pre><p>  }</p>
+</li>
+</ul>
+<h2 id="修改contacts-cfg-联系人"><a href="#修改contacts-cfg-联系人" class="headerlink" title="修改contacts.cfg 联系人"></a>修改contacts.cfg 联系人</h2><pre><code>define contact{
+    contact_name                    prokao    
+    use                                     generic-contact     
+    alias                                   pro kao       
+    email                                 prokao@qq.com   
+    service_notification_commands   check_http
+    service_notification_period     workhours
+    host_notification_period        workhours
+}
+</code></pre>
       
     </div>
     
