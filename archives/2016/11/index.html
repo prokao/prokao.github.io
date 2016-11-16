@@ -15,46 +15,18 @@
 
 
   
-  <title>LAMP LANP | 致远|prokao</title>
+  <title>Archives: 2016/11 | 致远|prokao</title>
 
   <!-- keywords -->
   
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="LAMP linux+apache+mysql+php python nginx
-
-1.nginx安装 yum -y install nginx
-2.mysql安装 yum -y install mysql mysql-server mysql-devel
-
-创建用户授权创建表 我在MySQL里面做了介绍，就不在这里阐述了
-
-3.php安装 yum -y install php
-4.php-my">
-<meta property="og:type" content="article">
-<meta property="og:title" content="LAMP LANP">
-<meta property="og:url" content="http://yoursite.com/2016/10/26/LAMP-LANP/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="致远|prokao">
+<meta property="og:url" content="http://yoursite.com/archives/2016/11/index.html">
 <meta property="og:site_name" content="致远|prokao">
-<meta property="og:description" content="LAMP linux+apache+mysql+php python nginx
-
-1.nginx安装 yum -y install nginx
-2.mysql安装 yum -y install mysql mysql-server mysql-devel
-
-创建用户授权创建表 我在MySQL里面做了介绍，就不在这里阐述了
-
-3.php安装 yum -y install php
-4.php-my">
-<meta property="og:updated_time" content="2016-10-26T13:45:56.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LAMP LANP">
-<meta name="twitter:description" content="LAMP linux+apache+mysql+php python nginx
-
-1.nginx安装 yum -y install nginx
-2.mysql安装 yum -y install mysql mysql-server mysql-devel
-
-创建用户授权创建表 我在MySQL里面做了介绍，就不在这里阐述了
-
-3.php安装 yum -y install php
-4.php-my">
+<meta name="twitter:title" content="致远|prokao">
   
     <link rel="alternative" href="/atom.xml" title="致远|prokao" type="application/atom+xml">
   
@@ -232,121 +204,53 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="[layout]-LAMP-LANP" class="article article-type-[layout]" itemscope itemprop="blogPost">
+      <div class="body-wrap">
   
-    <div class="article-meta">
-      <a href="/2016/10/26/LAMP-LANP/" class="article-date">
-  	<time datetime="2016-10-26T13:20:52.000Z" itemprop="datePublished">2016-10-26</time>
-</a>
-    </div>
   
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
     
     
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      LAMP LANP
       
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2016" class="archive-year">2016</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2016/11/16/hello-world/" class="archive-article-date">
+  	<time datetime="2016-11-16T14:22:07.864Z" itemprop="datePublished">Nov 16</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2016/11/16/hello-world/">
+        Hello World
+        
+      </a>
     </h1>
   
 
-      </header>
-      
-      <div class="article-info article-info-post">
-        
-        
+        <div class="article-info info-on-left">
+          
+          
 
-        
+          
+        </div>
         <div class="clearfix"></div>
-      </div>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li>LAMP linux+apache+mysql+php python nginx</li>
-</ul>
-<p>1.nginx安装 yum -y install nginx</p>
-<p>2.mysql安装 yum -y install mysql mysql-server mysql-devel</p>
-<ul>
-<li>创建用户授权创建表 我在MySQL里面做了介绍，就不在这里阐述了</li>
-</ul>
-<p>3.php安装 yum -y install php</p>
-<p>4.php-mysql安装 yum -y install php-mysql     [安装了什么编程语言，就要安装相对应的（语言-mysql）包  比如：php php-mysql]<br>5.dns安装 yum -y install bind bind-libs</p>
-<p>6.spawn-fcgi安装 需要下载安装包<br>配置spawn-fcgi</p>
-<p>vim /etc/sysconfig/spawn-fcgi<br>取消下面两行代码的注释，如果第二行代码是-u apache -g apache的话，需要改成-u nginx -g nginx<br>    SOCKET=/var/run/php-fcgi.sock<br>    OPTIONS=”-u nginx -g nginx -s $SOCKET -S -M 0600 -C 32 -F 1 -P /var/run/spawn-fcgi.pid – /usr/bin/php-cgi”<br>配置nginx 以虚拟主机的方式<br>vim /etc/nginx/conf.d/www.conf<br>在配置虚拟主机的基础下加入以下代码<br>    location ~ .php$ {<br>      root /var/www/html/www;<br>      fastcgi_pass unix:/var/run/php-fcgi.sock;<br>      fastcgi_index index.php;<br>      fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;<br>      include fastcgi_params;<br>    }</p>
-
-      
-    </div>
-    
+    </header>
   </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/2016/11/16/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">&lt;</strong>
-      <div class="article-nav-title">
-        
-          Hello World
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2016/10/26/nagios/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">nagios</div>
-      <strong class="article-nav-caption">&gt;</strong>
-    </a>
-  
-</nav>
-
-  
 </article>
+  
+  
+    </div></section>
+  
 
-
-<div class="share">
-	<!-- JiaThis Button BEGIN -->
-	<div class="jiathis_style">
-		<span class="jiathis_txt">分享到：</span>
-		<a class="jiathis_button_tsina"></a>
-		<a class="jiathis_button_cqq"></a>
-		<a class="jiathis_button_douban"></a>
-		<a class="jiathis_button_weixin"></a>
-		<a class="jiathis_button_tumblr"></a>
-		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
-	</div>
-	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
-	<!-- JiaThis Button END -->
-</div>
-
-
-
-<div class="duoshuo">
-	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="LAMP-LANP" data-title="LAMP LANP" data-url="http://yoursite.com/2016/10/26/LAMP-LANP/"></div>
-	<!-- 多说评论框 end -->
-	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-	<script type="text/javascript">
-	var duoshuoQuery = {short_name:"prokao"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0] 
-		 || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
-	<!-- 多说公共JS代码 end -->
-</div>
-
-
-
+    
 
 </div>
       <footer id="footer">
@@ -381,8 +285,8 @@
 		mathjax: true,
 		animate: true,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false

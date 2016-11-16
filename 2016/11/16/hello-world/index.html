@@ -15,46 +15,25 @@
 
 
   
-  <title>LAMP LANP | 致远|prokao</title>
+  <title>Hello World | 致远|prokao</title>
 
   <!-- keywords -->
   
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="LAMP linux+apache+mysql+php python nginx
-
-1.nginx安装 yum -y install nginx
-2.mysql安装 yum -y install mysql mysql-server mysql-devel
-
-创建用户授权创建表 我在MySQL里面做了介绍，就不在这里阐述了
-
-3.php安装 yum -y install php
-4.php-my">
+  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
+Quick">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LAMP LANP">
-<meta property="og:url" content="http://yoursite.com/2016/10/26/LAMP-LANP/index.html">
+<meta property="og:title" content="Hello World">
+<meta property="og:url" content="http://yoursite.com/2016/11/16/hello-world/index.html">
 <meta property="og:site_name" content="致远|prokao">
-<meta property="og:description" content="LAMP linux+apache+mysql+php python nginx
-
-1.nginx安装 yum -y install nginx
-2.mysql安装 yum -y install mysql mysql-server mysql-devel
-
-创建用户授权创建表 我在MySQL里面做了介绍，就不在这里阐述了
-
-3.php安装 yum -y install php
-4.php-my">
-<meta property="og:updated_time" content="2016-10-26T13:45:56.000Z">
+<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
+Quick">
+<meta property="og:updated_time" content="2016-10-19T12:10:56.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LAMP LANP">
-<meta name="twitter:description" content="LAMP linux+apache+mysql+php python nginx
-
-1.nginx安装 yum -y install nginx
-2.mysql安装 yum -y install mysql mysql-server mysql-devel
-
-创建用户授权创建表 我在MySQL里面做了介绍，就不在这里阐述了
-
-3.php安装 yum -y install php
-4.php-my">
+<meta name="twitter:title" content="Hello World">
+<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
+Quick">
   
     <link rel="alternative" href="/atom.xml" title="致远|prokao" type="application/atom+xml">
   
@@ -232,11 +211,11 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="[layout]-LAMP-LANP" class="article article-type-[layout]" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/10/26/LAMP-LANP/" class="article-date">
-  	<time datetime="2016-10-26T13:20:52.000Z" itemprop="datePublished">2016-10-26</time>
+      <a href="/2016/11/16/hello-world/" class="article-date">
+  	<time datetime="2016-11-16T14:22:07.864Z" itemprop="datePublished">2016-11-16</time>
 </a>
     </div>
   
@@ -249,7 +228,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      LAMP LANP
+      Hello World
       
     </h1>
   
@@ -267,18 +246,15 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <ul>
-<li>LAMP linux+apache+mysql+php python nginx</li>
-</ul>
-<p>1.nginx安装 yum -y install nginx</p>
-<p>2.mysql安装 yum -y install mysql mysql-server mysql-devel</p>
-<ul>
-<li>创建用户授权创建表 我在MySQL里面做了介绍，就不在这里阐述了</li>
-</ul>
-<p>3.php安装 yum -y install php</p>
-<p>4.php-mysql安装 yum -y install php-mysql     [安装了什么编程语言，就要安装相对应的（语言-mysql）包  比如：php php-mysql]<br>5.dns安装 yum -y install bind bind-libs</p>
-<p>6.spawn-fcgi安装 需要下载安装包<br>配置spawn-fcgi</p>
-<p>vim /etc/sysconfig/spawn-fcgi<br>取消下面两行代码的注释，如果第二行代码是-u apache -g apache的话，需要改成-u nginx -g nginx<br>    SOCKET=/var/run/php-fcgi.sock<br>    OPTIONS=”-u nginx -g nginx -s $SOCKET -S -M 0600 -C 32 -F 1 -P /var/run/spawn-fcgi.pid – /usr/bin/php-cgi”<br>配置nginx 以虚拟主机的方式<br>vim /etc/nginx/conf.d/www.conf<br>在配置虚拟主机的基础下加入以下代码<br>    location ~ .php$ {<br>      root /var/www/html/www;<br>      fastcgi_pass unix:/var/run/php-fcgi.sock;<br>      fastcgi_index index.php;<br>      fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;<br>      include fastcgi_params;<br>    }</p>
+        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
 
       
     </div>
@@ -288,18 +264,9 @@
     
 <nav id="article-nav">
   
-    <a href="/2016/11/16/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">&lt;</strong>
-      <div class="article-nav-title">
-        
-          Hello World
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/10/26/nagios/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">nagios</div>
+    <a href="/2016/10/26/LAMP-LANP/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">LAMP LANP</div>
       <strong class="article-nav-caption">&gt;</strong>
     </a>
   
@@ -328,7 +295,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="LAMP-LANP" data-title="LAMP LANP" data-url="http://yoursite.com/2016/10/26/LAMP-LANP/"></div>
+	<div class="ds-thread" data-thread-key="hello-world" data-title="Hello World" data-url="http://yoursite.com/2016/11/16/hello-world/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
