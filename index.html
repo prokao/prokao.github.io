@@ -210,7 +210,7 @@
   
     <div class="article-meta">
       <a href="/2016/11/16/hello-world/" class="article-date">
-  	<time datetime="2016-11-16T14:22:07.864Z" itemprop="datePublished">2016-11-16</time>
+  	<time datetime="2016-11-16T14:45:39.127Z" itemprop="datePublished">2016-11-16</time>
 </a>
     </div>
   
@@ -244,6 +244,73 @@
 <p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+      
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-Node-js部署网站" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/11/16/Node-js部署网站/" class="article-date">
+  	<time datetime="2016-11-16T14:27:07.000Z" itemprop="datePublished">2016-11-16</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/11/16/Node-js部署网站/">
+        Node.js部署网站
+        
+      </a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>node.js 是一个很好的开源代码，多个平台使用，运用与多个环境。有一些内置模块。<br>这里我采用linux6.7</p>
+<h1 id="安装nodejs"><a href="#安装nodejs" class="headerlink" title="安装nodejs"></a>安装nodejs</h1><ol>
+<li>yum install nodejs</li>
+</ol>
+<h3 id="查看版本"><a href="#查看版本" class="headerlink" title="查看版本"></a>查看版本</h3><p>node -v </p>
+<h1 id="运用"><a href="#运用" class="headerlink" title="运用"></a>运用</h1><p>node app.js #多数文件需要打开修改监听的端口改为80</p>
+<h1 id="后台运行"><a href="#后台运行" class="headerlink" title="后台运行"></a>后台运行</h1><ol>
+<li><p>nohup node app.js &amp; # nodejs  自带的后台运行 但是不支持日志</p>
+</li>
+<li><p>forever</p>
+</li>
+</ol>
+<p>npm install forever<br>forever start app.js   # 启动<br>forever stop  app.js   # 停止<br>forever start -i forever.log -o out.log -e err.log app.js # 指定日志目录</p>
 
       
     </div>
